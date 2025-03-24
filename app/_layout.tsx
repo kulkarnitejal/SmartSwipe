@@ -30,7 +30,24 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen 
+          name="(tabs)" 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="card/add" 
+          options={{ 
+            title: 'Add Credit Card',
+            presentation: 'modal' 
+          }} 
+        />
+        <Stack.Screen 
+          name="card/edit" 
+          options={{ 
+            title: 'Edit Credit Card',
+            presentation: 'modal' 
+          }} 
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
